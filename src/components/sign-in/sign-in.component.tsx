@@ -7,7 +7,6 @@ import {
 } from '../../utils/firebase.utils';
 import getAuthErrorMessage from '../../utils/authErrorHandling';
 
-// Styled components
 const SignInFormContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -66,7 +65,6 @@ const SignInForm: React.FC = () => {
   const logGoogleUser = async () => {
     try {
       await signInWithGooglePopup();
-      // Handle successful Google sign-in if necessary
     } catch (error) {
       setError(getAuthErrorMessage(error as Error));
       console.error('Error signing in', error);

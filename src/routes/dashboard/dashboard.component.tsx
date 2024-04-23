@@ -56,7 +56,7 @@ const Dashboard: FC = () => {
   }, []);
 
   if (loading) {
-    return <Loader />; // Display a loader component while data is loading
+    return <Loader />;
   }
 
   return (

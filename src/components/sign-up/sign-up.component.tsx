@@ -8,7 +8,6 @@ import {
 } from '../../utils/firebase.utils';
 import getAuthErrorMessage from '../../utils/authErrorHandling';
 
-// Define the form fields interface
 interface FormFields {
   displayName: string;
   email: string;
@@ -16,7 +15,6 @@ interface FormFields {
   confirmPassword: string;
 }
 
-// Styled components
 const SignUpFormContainer = styled.div`
   display: flex;
   flex-direction: column;

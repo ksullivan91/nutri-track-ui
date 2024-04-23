@@ -38,7 +38,7 @@ export const fetchNutritionalFacts = async (
         accept: 'application/json',
       },
       method: 'POST',
-      body: formData, // Send the form data with the file
+      body: formData,
     });
 
     if (!response.ok) {
@@ -48,6 +48,6 @@ export const fetchNutritionalFacts = async (
     return (await response.json()) as NutritionalInfo;
   } catch (error) {
     console.error('Failed to fetch nutritional facts:', error);
-    return null; // Or handle the error as you see fit
+    return null;
   }
 };

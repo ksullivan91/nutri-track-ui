@@ -1,4 +1,4 @@
-import { Tabs, Tab, TabsList } from 'base-ui-react';
+import { Tabs, Tab, TabsList, Typography } from 'base-ui-react';
 import { FC, Fragment, useContext, useEffect, useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
@@ -9,8 +9,13 @@ const NavigationContainer = styled.div`
   display: flex;
   justify-content: space-between;
 `;
+
 const StyledTabs = styled(Tabs)`
   width: 240px;
+`;
+
+const StyledOutlet = styled(Outlet)`
+  margin: 32px 0;
 `;
 
 const StyledLink = styled(Link)`
@@ -18,10 +23,6 @@ const StyledLink = styled(Link)`
   &:visited {
     color: initial;
   }
-`;
-
-const StyledOutlet = styled(Outlet)`
-  margin: 32px 0;
 `;
 
 const Navigation: FC = () => {
@@ -60,9 +61,11 @@ const Navigation: FC = () => {
             </Tab>
           </TabsList>
         </StyledTabs>
-        <Link className='nav-link' to='/auth'>
-          {currentUser ? currentUser?.displayName : 'Sign in'}
-        </Link>
+        <StyledLink className='nav-link' to='/auth'>
+          <Typography variant='p'>
+            {currentUser ? currentUser?.displayName : 'Sign in'}
+          </Typography>
+        </StyledLink>
       </NavigationContainer>
       <StyledOutlet />
     </Fragment>

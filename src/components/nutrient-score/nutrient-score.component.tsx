@@ -68,7 +68,6 @@ const normalizeNutrientName = (name: string) => {
     vitaminA: 'Vitamin A',
     vitaminC: 'Vitamin C',
     vitaminD: 'Vitamin D',
-    // Add other mappings if names do not match exactly
   };
   return mappings[name] || name.charAt(0).toUpperCase() + name.slice(1);
 };
