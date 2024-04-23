@@ -1,4 +1,5 @@
-const baseUrl = 'http://localhost:8080/nutritional-facts';
+const baseUrl =
+  'http://nu-track-env.eba-j9qmtzmq.us-east-1.elasticbeanstalk.com/nutritional-facts';
 
 /**
  * Interface for the nutritional information returned from the server.
